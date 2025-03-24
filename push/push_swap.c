@@ -97,20 +97,19 @@ int	main(int argc, char **argv)
 	{
 		ft_parsing(argv);
 		fill_stack(&stack_a, argv, argc);
-		if (ifsorted(stack_a) == 0)
-		{
-			freethelist(stack_a);
-			exit(0);
-		}
 		if (ifduplicated(stack_a) == 1)
 		{
 			freethelist(stack_a);
 			ft_error();
+		}
+		if (ifsorted(stack_a) == 0)
+		{
+			freethelist(stack_a);
+			exit(0);
 		}
 		sort_stack(&stack_a, &stack_b);
 	}
 	else
 		return (0);
 	freethelist(stack_a);
-	freethelist(stack_b);
 }

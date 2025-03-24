@@ -3,7 +3,7 @@ SRC = operations1.c push_swap.c the_split.c utils.c parsing.c sort.c\
 
 OBJ = $(SRC:.c=.o)
 
-CC = CC
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 NAME = push_swap
